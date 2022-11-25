@@ -7,7 +7,10 @@ function Timer({timeAmount,onFinish}) {
     intervalId.current = setInterval(()=>{ setTime(t => t-1 ) },1000)
   },[])
   useEffect(()=>{
-    if(time <= 0) clearInterval(intervalId.current)
+    if(time <= 0){
+      clearInterval(intervalId.current)
+      onFinish()
+    }
   },[time])
 
   return (

@@ -1,36 +1,125 @@
-$bg-color:#111;
-$border-color: #aaa;
-%default-border{
-  border: 2px solid $border-color;
-}
+//colors
+$bg-color: #DDDDDD;
+$primary-color: #222831;
+$secondary-color: #30475E;
+$minor-color: #F05454;
+
+// media quieres
+$mobile: "(max-width:480px)";
+$tablet: "(max-width:767px)";
+$small: "(min-width:767px)";
+$medium: "(min-width:992px)";
+$large: "(min-width:1200px)";
+
+//global classes
 @mixin square ($size) {
   width: $size;
   height: $size;
 }
 
-*{
+.container {
+  display: block;
+  margin: 0 auto;
+
+  @media #{$mobile} and #{$tablet} {
+    width: 100%;
+  }
+
+  @media #{$small} {
+    width: 720px;
+  }
+
+  @media #{$medium} {
+    width: 960px;
+  }
+
+  @media #{$large} {
+    width: 1140px;
+  }
+}
+
+//global styles
+* {
   box-sizing: border-box;
 }
-body{
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+body {
   background-color: $bg-color;
-  color: #eee;
+  color: #000;
   margin: 0;
   font-size: 16pt;
   font-family: Arial, Helvetica, sans-serif;
 }
-.Quiz-Box{
-  width: 300px;
-  height: 500px;
-  margin: 100px auto;
-  @extend %default-border
+
+.Quiz {
+  margin-top: 40px
 }
-.Timer{
+
+.Timer {
+  background-color: $secondary-color;
   @include square(60px);
-  @extend %default-border;
+  color: #fff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 18pt;
   margin: 10px auto;
+}
+
+.QuestionBox {
+  padding-left: 20px;
+  padding-right: 5px;
+
+  .Question {
+    font-size: 100%;
+  }
+
+  
+
+  .Answers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .Answer {
+      &.selected{
+        border: 3px solid #aaf;
+      }
+      color: #fff;
+      background-color: $primary-color;
+      width: 40%;
+      min-height: 35px;
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      font-size: 16pt;
+      border-radius: 2px;
+      @media #{$mobile} {
+        width: 95%;
+      }
+
+      @media #{$medium} {
+        width: 23%;
+      }
+    }
+  }
+}
+
+.submit-btn{
+  display: block;
+  width: 200px;
+  height: 40px;
+  margin: 0 auto;
+  background-color: $minor-color;
+  border: none;
+  font-size: 13pt;
+  border-radius: 5px;
+  cursor: pointer;
 }

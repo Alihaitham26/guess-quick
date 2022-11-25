@@ -1,11 +1,11 @@
 import './App.scss'
-import QuizBox from './QuizBox'
+import Quiz from './Quiz'
 
 function App() {
 
   return (
-    <div className="App">
-      <QuizBox/>
+    <div className="App" >
+      <Quiz />
     </div>
   )
 }
