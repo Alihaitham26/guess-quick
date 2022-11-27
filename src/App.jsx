@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import './App.scss'
-import Quiz from './Quiz'
-import Start from './Start'
+import './styles/App.scss'
+import Quiz from './pages/Quiz/Quiz'
+import Start from './pages/Start/Start'
 
 function App() {
   const [isPlaying,setIsPlaying]=useState(false)
