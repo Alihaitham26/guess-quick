@@ -55,6 +55,27 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.Start{
+  width: fit-content;
+  height: fit-content;
+  position:absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  .start-btn{
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: $primary-color;
+    color: #fff;
+    font-size: 14pt;
+    cursor: pointer;
+  }
+}
+
+
 .Quiz {
   margin-top: 40px
 }
