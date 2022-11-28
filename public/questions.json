@@ -3,5 +3,10 @@
     "question":"right traingle(ABC), right in A, AB=3, AC=4, AB=.....",
     "answers":["3","5","6","10"],
     "true":["3"]
+  },
+  {
+    "question":"traingle(ABC) ,AB=4cm ,BC=7cm ,AC can be ...",
+    "answers":["12cm","2cm","20cm","10cm"],
+    "true":["10cm"]
   }
 ]
